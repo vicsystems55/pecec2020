@@ -1,13 +1,13 @@
-@extends('layouts.app', [
-  'namePage' => 'Typography',
+@extends('layouts.author_app', [
+  'namePage' => 'Dashboard',
   'class' => 'sidebar-mini',
-  'activePage' => 'typography',
+  'activePage' => 'home',
 ])
 
 @section('content')
   <div style="min-height: 300px;" class="panel-header panel-header-sm p-5 text-white">
   <div class="p-3"></div>
-  <h1>Settings</h1>
+  <h1>Welcome, {{Auth::user()->name}}</h1>
   <div class="p-5"></div>
   </div>
 

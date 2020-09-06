@@ -28,9 +28,9 @@
         <div class="col-md-4 ml-auto mr-auto">
             <form role="form" method="POST" action="{{ route('login') }}">
                 @csrf
-            <div class="card card-login card-plain">
+            <div class="card card-login text-dark ">
                 <div class="card-header ">
-                <div class="logo-container">
+                <div class="logo-containe p-2">
                     <img src="{{ asset('assets/img/now-logo.png') }}" alt="">
                 </div>
                 </div>
@@ -62,16 +62,16 @@
                     </span>
                 @endif
                 </div>
-                <div class="card-footer ">
+                <div class="card-footer">
                 <button  type = "submit" class="btn btn-primary btn-round btn-lg btn-block mb-3">{{ __('Get Started') }}</button>
                 <div class="pull-left">
                     <h6>
-                    <a href="{{ route('register') }}" class="link footer-link">{{ __('Create Account') }}</a>
+                    <a href="{{ route('register') }}" class="link footer-link text-dark">{{ __('Create Account') }}</a>
                     </h6>
                 </div>
                 <div class="pull-right">
                     <h6>
-                    <a href="{{ route('password.request') }}" class="link footer-link">{{ __('Forgot Password?') }}</a>
+                    <a href="{{ route('password.request') }}" class="link footer-link text-dark">{{ __('Forgot Password?') }}</a>
                     </h6>                
                 </div>
                 </div>

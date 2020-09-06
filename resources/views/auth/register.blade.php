@@ -1,7 +1,7 @@
 @extends('layouts.app', [
     'namePage' => 'Register page',
     'activePage' => 'register',
-    'backgroundImage' => asset('assets') . "/img/bg16.jpg",
+    'backgroundImage' => asset('assets') . "/img/bg14.jpg",
 ])
 
 @section('content')
@@ -13,11 +13,10 @@
             <div class="icon icon-primary">
               <i class="now-ui-icons media-2_sound-wave"></i>
             </div>
-            <div class="description">
-              <h5 class="info-title">{{ __('Marketing') }}</h5>
-              <p class="description">
-                {{ __("We've created the marketing campaign of the website. It was a very interesting collaboration.") }}
-              </p>
+            <div class="description ">
+            <div class="logo-containe p-2">
+                    <img src="{{ asset('assets/img/now-logo.png') }}" alt="">
+                </div>
             </div>
           </div>
           <div class="info-area info-horizontal">
@@ -25,8 +24,8 @@
               <i class="now-ui-icons media-1_button-pause"></i>
             </div>
             <div class="description">
-              <h5 class="info-title">{{ __('Fully Coded in HTML5') }}</h5>
-              <p class="description">
+              <h5 class="info-title text-dark">{{ __('Fully Coded in HTML5') }}</h5>
+              <p class="description text-dark">
                 {{ __("We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.") }}
               </p>
             </div>
@@ -36,8 +35,8 @@
               <i class="now-ui-icons users_single-02"></i>
             </div>
             <div class="description">
-              <h5 class="info-title">{{ __('Built Audience') }}</h5>
-              <p class="description">
+              <h5 class="info-title text-dark">{{ __('Built Audience') }}</h5>
+              <p class="description text-dark">
                 {{ __('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
               </p>
             </div>

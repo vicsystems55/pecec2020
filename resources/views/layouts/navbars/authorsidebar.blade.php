@@ -13,7 +13,7 @@
   <div class="sidebar-wrapper" id="sidebar-wrapper">
     <ul class="nav">
       <li class="@if ($activePage == 'home') active @endif">
-        <a href="{{ route('home') }}">
+        <a href="{{ route('author') }}">
           <i class="text-danger now-ui-icons tech_tv"></i>
           <p>{{ __('Home') }}</p>
         </a>
@@ -29,13 +29,13 @@
         <div class="collapse show" id="laravelExamples">
           <ul class="nav">
             <li class="@if ($activePage == 'profile') active @endif">
-              <a href="{{ route('profile.edit') }}">
+              <a href="">
                 <i class="text-danger now-ui-icons files_single-copy-04"></i>
                 <p> {{ __("All Post") }} </p>
               </a>
             </li>
             <li class="@if ($activePage == 'users') active @endif">
-              <a href="{{ route('user.index') }}">
+              <a href="">
                 <i class="text-danger now-ui-icons files_paper"></i>
                 <p> {{ __("Create New") }} </p>
               </a>
@@ -45,19 +45,19 @@
      
       
       <li class = " @if ($activePage == 'notifications') active @endif">
-        <a href="{{ route('page.index','notifications') }}">
+        <a href="">
           <i class=" text-danger now-ui-icons ui-1_bell-53"></i>
           <p>{{ __('Notifications') }}</p>
         </a>
       </li>
       <li class = " @if ($activePage == 'table') active @endif">
-        <a href="{{ route('page.index','table') }}">
+        <a href="">
           <i class="text-danger now-ui-icons users_single-02"></i>
           <p>{{ __('My Profile') }}</p>
         </a>
       </li>
       <li class = "@if ($activePage == 'typography') active @endif">
-        <a href="{{ route('page.index','typography') }}">
+        <a href="">
           <i class="text-danger now-ui-icons loader_gear"></i>
           <p>{{ __('Settings') }}</p>
         </a>

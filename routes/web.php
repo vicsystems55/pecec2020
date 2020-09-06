@@ -13,14 +13,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group(['middleware' => ['auth','author','verified'], 'prefix' => 'author'], function(){
+
+    Route::get('/', 'AuthorPageController@index')->name('author');
+	
+});
+
+Route::group(['middleware' => ['auth','admin','verified'], 'prefix' => 'admin'], function(){
+
+	Route::get('/', 'AdminPageController@index');	
+	
+});
+
+
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/choose', 'ChooseRoleController@index');
+
+Route::get('/default', function () {
+    return view('default');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -31,4 +51,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
 });
+
+
+
+
+
+
 

@@ -31,6 +31,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('blog/about', function () {
+    return view('blog.about');
+});
+
+Route::get('blog/blog-single', function () {
+    return view('blog.blog-single');
+});
+
+Route::get('blog/categories', function () {
+    return view('blog.categories');
+});
+
+Route::get('blog/contact', function () {
+    return view('blog.contact');
+});
+
+Route::get('blog/index', function () {
+    return view('blog.index');
+});
+
 Route::get('/choose', 'ChooseRoleController@index');
 
 Route::get('/default', function () {

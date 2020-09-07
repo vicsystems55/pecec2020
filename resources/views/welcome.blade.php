@@ -35,6 +35,69 @@
     <div class="card mx-auto">
       <h1 class="text-center">Categories</h1>
 
+          <div class="container">
+
+          <div class="row">
+
+                <div class="col-lg-4 col-md-3 p-2 mx-auto">
+                      <a target="_blank" href="/blog/index">
+                        <div class="card shadow bg-dark">
+                          <div class="card-body">
+                            <h3 class="text-center text-white">Entertainment</h3>
+                            
+                          </div>
+                        </div>
+                      
+                      </a>
+                </div>
+
+                <div class="col-lg-4 col-md-3 p-2 mx-auto">
+                      <a target="_blank" href="/blog/index">
+                        <div class="card shadow bg-dark">
+                          <div class="card-body">
+                            <h3 class="text-center text-white">Tech</h3>
+                            
+                          </div>
+                        </div>
+                      
+                      </a>
+                </div>
+
+                <div class="col-lg-4 col-md-3 p-2 mx-auto">
+                      <a target="_blank" href="/blog/index">
+                        <div class="card shadow bg-dark">
+                          <div class="card-body">
+                            <h3 class="text-center text-white">Music</h3>
+                            
+                          </div>
+                        </div>
+                      
+                      </a>
+                </div>
+
+                <div class="col-lg-4 col-md-3 p-2 mx-auto">
+                      <a target="_blank" href="/blog/index">
+                        <div class="card shadow bg-dark">
+                          <div class="card-body">
+                            <h3 class="text-center text-white">Politics</h3>
+                            
+                          </div>
+                        </div>
+                      
+                      </a>
+                </div>
+
+               
+
+                
+
+
+
+
+                </div>
+          
+          </div>
+
     </div>
   </div>
 

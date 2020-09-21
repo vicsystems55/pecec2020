@@ -28,14 +28,14 @@
         </a>
         <div class="collapse show" id="laravelExamples">
           <ul class="nav">
-            <li class="@if ($activePage == 'profile') active @endif">
+            <li class="@if ($activePage == 'all_post') active @endif">
               <a href="">
                 <i class="text-danger now-ui-icons files_single-copy-04"></i>
                 <p> {{ __("All Post") }} </p>
               </a>
             </li>
-            <li class="@if ($activePage == 'users') active @endif">
-              <a href="">
+            <li class="@if ($activePage == 'create_post') active @endif">
+              <a href="{{ route('author.create_post')}}">
                 <i class="text-danger now-ui-icons files_paper"></i>
                 <p> {{ __("Create New") }} </p>
               </a>
@@ -50,8 +50,8 @@
           <p>{{ __('Notifications') }}</p>
         </a>
       </li>
-      <li class = " @if ($activePage == 'table') active @endif">
-        <a href="">
+      <li class = " @if ($activePage == 'profile') active @endif">
+        <a href="{{ route('author.profile')}}">
           <i class="text-danger now-ui-icons users_single-02"></i>
           <p>{{ __('My Profile') }}</p>
         </a>

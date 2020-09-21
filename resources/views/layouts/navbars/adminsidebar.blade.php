@@ -7,7 +7,7 @@
       {{ __('CT') }}
     </a>
     <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-      {{ __('Creative Tim') }}
+      {{ __('Admin') }}
     </a>
   </div>
   <div class="sidebar-wrapper" id="sidebar-wrapper">

@@ -1,12 +1,27 @@
-<template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
+@extends('layouts.author_app', [
+  'namePage' => 'Dashboard',
+  'class' => 'sidebar-mini',
+  'activePage' => 'create_post',
+])
 
-                    <div class="card-body">
-                            <form action="">
+@section('content')
+  <div style="min-height: 300px;" class="panel-header panel-header-sm p-5 text-white">
+  <div class="p-3"></div>
+  
+  <div class="p-5"></div>
+  </div>
+
+  <div class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="title">Create Post</h5>
+            <p class="category">Created using Montserrat Font Family</p>
+          </div>
+          <div class="card-body">
+
+          <form action="">
 
                                 <div class="form-group">
                                     <input class="form-control" name="title" type="text" placeholder="Title of Post">
@@ -17,7 +32,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <textarea class="form-control" name="body" type="text" placeholder="Title of Post">
+                                    <textarea rows="3" class="" name="body">
                                   </textarea>
                                 </div>
 
@@ -35,21 +50,25 @@
                                     </label>
                                 </div>
 
+                                <div class="form-group">
+                                  <button class="btn btn-primary btn-sm">submit</button>
+                                </div>
+
 
 
 
                             </form>
-                    </div>
-                </div>
-            </div>
+            
+          </div>
         </div>
+        <div id="app">
+       
+        </div>
+      </div>
     </div>
-</template>
+  </div>
 
-<script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
-</script>
+  
+
+  <script src="{{mix('js/app.js')}}"></script>
+@endsection

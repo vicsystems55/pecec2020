@@ -50,7 +50,7 @@
   <!-- End Google Tag Manager (noscript) -->
   <div class="wrapper">
     @auth
-      @include('layouts.page_template.auth')
+      @include('layouts.page_template.adminauth')
     @endauth
     @guest
       @include('layouts.page_template.guest')

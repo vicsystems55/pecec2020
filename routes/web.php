@@ -13,15 +13,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/news', function () {
+
+
+    $client = new \GuzzleHttp\Client();
+    $request = $client->get('http://newsapi.org/v2/top-headlines?country=ng&apiKey=142b1d002c5d4e4aac719268900fb37d');
+    $response = $request->getBody()->getContents();
+
+    $response = json_decode($response);
+    
+    dd($response);
+
+    
+
+});
+
+Route::get('/generate_post', 'GeneratePostController@generate_post');
+
+
 Route::group(['middleware' => ['auth','author','verified'], 'prefix' => 'author'], function(){
 
     Route::get('/', 'AuthorPageController@index')->name('author');
+    Route::get('/create_post', 'AuthorPageController@create_post')->name('author.create_post');
+    Route::get('/profile', 'AuthorPageController@profile')->name('author.profile');
 	
 });
 
 Route::group(['middleware' => ['auth','admin','verified'], 'prefix' => 'admin'], function(){
 
-	Route::get('/', 'AdminPageController@index');	
+    Route::get('/', 'AdminPageController@index');
+    Route::get('/author_p', 'AdminPageController@author_profile')->name('author.profile');		
 	
 });
 
@@ -47,8 +68,11 @@ Route::get('blog/contact', function () {
     return view('blog.contact');
 });
 
-Route::get('blog/index', function () {
-    return view('blog.index');
+Route::get('/blog/index', 'FrontPageController@index')->name('blog.home');
+
+
+Route::get('blog/author_profile/{id}', function () {
+    return view('blog.author');
 });
 
 Route::get('/choose', 'ChooseRoleController@index');

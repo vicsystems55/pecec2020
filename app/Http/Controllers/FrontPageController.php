@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Auth;
+use App\Post;
 
-class AuthorPageController extends Controller
+use App\PostInCateory;
+
+use App\Trending;
+
+use DB;
+class FrontPageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,17 +20,10 @@ class AuthorPageController extends Controller
      */
     public function index()
     {
-        return view('author.home');
-    }
-
-    public function create_post()
-    {
-        return view('author.create_post');
-    }
-
-    public function profile()
-    {
-        return view('author.profile');
+        $posts = DB::table('posts')->where('status', 'active')->get();
+        return view('blog.index',[
+            'posts' => $posts
+        ]);
     }
 
     /**

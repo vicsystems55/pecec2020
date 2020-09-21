@@ -31,7 +31,7 @@
             <div class="card card-login text-dark ">
                 <div class="card-header ">
                 <div class="logo-containe p-2">
-                    <img src="{{ asset('assets/img/now-logo.png') }}" alt="">
+                <img src="{{ asset('assets/img/now-logo.png') }}" alt="">
                 </div>
                 </div>
                 <div class="card-body ">

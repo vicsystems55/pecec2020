@@ -4,28 +4,42 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Post;
+
+use DB;
+
 use Auth;
 
-class AuthorPageController extends Controller
+class GeneratePostController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function generate_post()
     {
-        return view('author.home');
-    }
+        $client = new \GuzzleHttp\Client();
+        $request = $client->get('http://newsapi.org/v2/top-headlines?country=ng&apiKey=142b1d002c5d4e4aac719268900fb37d');
+        $response = $request->getBody()->getContents();
 
-    public function create_post()
-    {
-        return view('author.create_post');
-    }
+        $response = json_decode($response);
+    
+        foreach ($response->articles as $article) {
+        $post = new Post();
+        $post->title = $article->title;
+        $post->excerpt = $article->description;
+        $post->body = $article->content;
+        $post->status = 'active';
+        $post->published_date = $article->publishedAt;
+        $post->image_url = $article->urlToImage;
+        $post->author_id = 1;
 
-    public function profile()
-    {
-        return view('author.profile');
+
+      
+        $post->save();
+      }
+
     }
 
     /**

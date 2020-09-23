@@ -11,6 +11,9 @@ use App\PostInCateory;
 use App\Trending;
 
 use DB;
+
+use Carbon;
+
 class FrontPageController extends Controller
 {
     /**
@@ -25,6 +28,17 @@ class FrontPageController extends Controller
             'posts' => $posts
         ]);
     }
+
+    public function single($id)
+    {
+        $post = DB::table('posts')->where('status', 'active')->where('id', $d)->first();
+        return view('blog.single_post',[
+            'single_post' => $post
+        ]);
+    }
+
+    
+
 
     /**
      * Show the form for creating a new resource.

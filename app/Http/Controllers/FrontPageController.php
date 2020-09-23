@@ -25,7 +25,7 @@ class FrontPageController extends Controller
     {
         $posts = DB::table('posts')->where('status', 'active')->get();
 
-        dd($posts);
+       
         return view('blog.index',[
             'posts' => $posts
         ]);

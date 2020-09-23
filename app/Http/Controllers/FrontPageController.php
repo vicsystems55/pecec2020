@@ -24,6 +24,8 @@ class FrontPageController extends Controller
     public function index()
     {
         $posts = DB::table('posts')->where('status', 'active')->get();
+
+        dd($posts);
         return view('blog.index',[
             'posts' => $posts
         ]);
@@ -31,7 +33,7 @@ class FrontPageController extends Controller
 
     public function single($id)
     {
-        $post = DB::table('posts')->where('status', 'active')->where('id', $d)->first();
+        $post = DB::table('posts')->where('status', 'active')->where('id', $id)->first();
         return view('blog.single_post',[
             'single_post' => $post
         ]);

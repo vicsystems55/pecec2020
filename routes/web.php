@@ -57,7 +57,7 @@ Route::get('blog/about', function () {
 });
 
 Route::get('blog/blog-single', function () {
-    return view('blog.blog-single');
+    return view('blog.single_post');
 });
 
 Route::get('blog/categories', function () {
@@ -69,6 +69,8 @@ Route::get('blog/contact', function () {
 });
 
 Route::get('/blog/index', 'FrontPageController@index')->name('blog.home');
+
+Route::get('/blog/blog-single/{id}', 'FrontPageController@single')->name('blog.single');
 
 
 Route::get('blog/author_profile/{id}', function () {

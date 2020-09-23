@@ -159,7 +159,7 @@
               <div class="img-bg" style="background-image: url('{{$post->image_url}}')"></div>
               <div class="contents">
                 <span class="caption">Editor's Pick</span>
-                <h2><a href="blog-single">{{ $post->title}}</a></h2>
+                <h2><a target="_blank" href="{{ route('blog.single', $post->id)}}">{{ $post->title}}</a></h2>
                 <p class="mb-3">{{$post->excerpt}}</p>
                 
                 <div class="post-meta">

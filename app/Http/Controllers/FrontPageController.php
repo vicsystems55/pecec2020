@@ -8,11 +8,13 @@ use App\Post;
 
 use App\PostInCateory;
 
+use Carbon;
+
 use App\Trending;
 
 use DB;
 
-use Carbon;
+
 
 class FrontPageController extends Controller
 {
@@ -34,8 +36,13 @@ class FrontPageController extends Controller
     public function single($id)
     {
         $post = DB::table('posts')->where('status', 'active')->where('id', $id)->first();
+        $posts = Post::with('user')->where('status', 'active')->get();
+        $posts2 = Post::find(1)->user;
+
+     
         return view('blog.single_post',[
-            'single_post' => $post
+            'single_post' => $post,
+            'posts' => $posts
         ]);
     }
 

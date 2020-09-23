@@ -14,6 +14,10 @@
   <div class="content">
     <div class="row">
       <div class="col-md-12">
+      <div id="app">
+          <editor-component></editor-component>
+        </div>
+
         <div class="card">
           <div class="card-header">
             <h5 class="title">Create Post</h5>
@@ -27,17 +31,43 @@
                                     <input class="form-control" name="title" type="text" placeholder="Title of Post">
                                 </div>
 
-                                <div class="form-group">
-                                    <input class="form-control" name="excerpt" type="text" placeholder="Title of Post">
-                                </div>
+                                
 
-                                <div class="form-group">
-                                    <textarea rows="3" class="" name="body">
-                                  </textarea>
-                                </div>
+                               
 
                                 <div class="form-group">
                                     <input class="form-control" name="featured_image" type="text" placeholder="Image url">
+                                </div>
+
+                              <h3>Select Category</h3>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Politics
+                                        <span class="form-check-sign">
+                                            <span class="check"></span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Politics
+                                        <span class="form-check-sign">
+                                            <span class="check"></span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Politics
+                                        <span class="form-check-sign">
+                                            <span class="check"></span>
+                                        </span>
+                                    </label>
                                 </div>
 
                                 <div class="form-check">
@@ -61,9 +91,7 @@
             
           </div>
         </div>
-        <div id="app">
-       
-        </div>
+        
       </div>
     </div>
   </div>
@@ -71,4 +99,5 @@
   
 
   <script src="{{mix('js/app.js')}}"></script>
+
 @endsection

@@ -166,7 +166,7 @@
       
                   <div class="pt-5">
                     <div class="section-title">
-                      <h2 class="mb-5">6 Comments</h2>
+                      <h2 class="mb-5">0 Comments</h2>
                     </div>
                     <!-- <ul class="comment-list">
                       <li class="comment">
